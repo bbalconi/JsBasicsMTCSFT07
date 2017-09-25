@@ -1,0 +1,13 @@
+#bkgr{
+  background-color: green;
+  font-family: "Comic Sans MS";
+}
+
+#title{
+  font-family: 'Times New Roman';
+}
+
+#brdr{
+  border: 20px magenta;
+  border-style: groove;
+}
