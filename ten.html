@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <p id="loading"></p>
+    <script>
+      $("#loading").html("loading...");
+      setTimeout(function(){
+        var doneLoading = "Loading Complete!"
+        $("#loading").html(doneLoading);
+      }, 4000);
+
+    </script>
+</body>
+</html>
+
+
+<!-- var loading = "loading....";
+
+//write code here
+
+setTimeout(function(){
+  var doneLoading = "Loading Complete!"
+  //write the code here
+
+}, 4000);
+
+//write a jquery or javascript function that displays the string "loading..." on an html page
+//and then replaces that string with "Loading Complete" after the timeout has finished. Use the code above. -->
