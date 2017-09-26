@@ -1,0 +1,17 @@
+thead {
+  font: green;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 22px;
+}
+#actual-body{
+  color: green;
+}
