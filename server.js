@@ -10,17 +10,10 @@ app.use(function(req, res, next){
 });
 var allNames = ['Moby', 'Burger']
 
-<<<<<<< HEAD
 /* serves main page */
 app.get("/", function(req, res) {
   res.sendfile('html-practice.html')
 });
-=======
- /* serves main page */
- app.get("/", function(req, res) {
-    res.sendfile('index.html')
- });
->>>>>>> 6986b418393a25f0c5e7fcbcdce4ba39a45298fe
 
 app.get("/names", function(req, res){
   res.json(allNames);

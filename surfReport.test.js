@@ -8,7 +8,7 @@ var expect = chai.expect;
 //to create and console.log a string that logs "today is {date}
 //and the waves are {todaysWaves}, dude." The date should formatted as a "short date."
 
-describe.only("surfReport", function(){
+describe("surfReport", function(){
   it ('can report current waves', function(){
     var val = surfReport.processReport();
     val.should.be.a('string');
