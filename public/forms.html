@@ -37,7 +37,7 @@
   <p id="formNameValue"></p>
   <form>
       <input class="form-control" type="text" id="name" placeholder="Enter Name">
-      <input class="form-control" type="number" id="age" placeholder="Enter Age">
+      <input class="form-control" type="date" id="birthday" placeholder="Birthdate">
       <input class="form-control" type="email" id="email" placeholder="Enter Email">
       <button class="btn btn-primary" id="formButton">Click me!</button>
   </form>
@@ -55,7 +55,7 @@ var allOurNames = [];
 var refreshList = function(){
   $('#nameList').empty();
     allOurNames.forEach((name)=>{
-      $('#nameList').append("<li>" + name + "</li>");
+      $('#nameList').append("<li>" + name.name + " - birthday " + name.birthday + "</li>");
     });
 }
 
@@ -67,10 +67,12 @@ $.get("/names", function(data){
 
 $('#formButton').click(function(event){
   event.preventDefault();
-  allOurNames.push($('#name').val());
-  $.post("/names", {
-    name: $('#name').val()
-  });
+  var newName = {
+    name: $('#name').val(),
+    birthday: $('#birthday').val()
+  };
+  allOurNames.push(newName);
+    $.post("/names", newName);
   refreshList();
 });
 
